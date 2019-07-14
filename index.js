@@ -58,4 +58,17 @@ client.on('ready', () => {
     // client.user.setActivity("TV", {type: "WATCHING"})
 })
 
+client.on('message', (receivedMessage) => {
+    // Prevent bot from responding to its own messages
+    if (receivedMessage.author == client.user) {
+        return
+    }
+    
+    // Check if the bot's user was tagged in the message
+    if (receivedMessage.content.includes(client.user.toString())) {
+        // Send acknowledgement message
+        receivedMessage.channel.send("Message received from " +
+            receivedMessage.author.toString() + ": " + receivedMessage.content)
+    }
+})
 client.login("NTg3Mjg4NTkxNTA4NDM5MDU2.XSrnRg.AH-VB-5VQsi9tltGUpuP8gNC-HU") // Replace XXXXX with your bot token
