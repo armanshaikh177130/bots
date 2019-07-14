@@ -48,5 +48,14 @@ function multiplyCommand(arguments, receivedMessage) {
     })
     receivedMessage.channel.send("The product of " + arguments + " multiplied together is: " + product.toString())
 }
+client.on('ready', () => {
+    // Set bot status to: "Playing with JavaScript"
+    client.user.setActivity("with JavaScript")
+
+    // Alternatively, you can set the activity to any of the following:
+    // PLAYING, STREAMING, LISTENING, WATCHING
+    // For example:
+    // client.user.setActivity("TV", {type: "WATCHING"})
+})
 
 client.login("NTg3Mjg4NTkxNTA4NDM5MDU2.XSrnRg.AH-VB-5VQsi9tltGUpuP8gNC-HU") // Replace XXXXX with your bot token
