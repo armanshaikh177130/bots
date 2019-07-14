@@ -50,7 +50,7 @@ function multiplyCommand(arguments, receivedMessage) {
 }
 client.on('ready', () => {
     // Set bot status to: "Playing with JavaScript"
-    client.user.setActivity("with JavaScript")
+    client.user.setActivity("with ARMAN")
 
     // Alternatively, you can set the activity to any of the following:
     // PLAYING, STREAMING, LISTENING, WATCHING
